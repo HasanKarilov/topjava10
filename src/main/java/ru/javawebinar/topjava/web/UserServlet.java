@@ -16,6 +16,7 @@ public class UserServlet extends HttpServlet {
     А наш сервлет делает mapping адреса "/users"
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/users.jsp").forward(request, response);
+        //request.getRequestDispatcher("/users.jsp").forward(request, response);
+        response.sendRedirect("users.jsp");
     }
 }
