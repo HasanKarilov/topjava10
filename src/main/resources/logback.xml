@@ -4,6 +4,7 @@
     <!-- To enable JMX Management -->
     <jmxConfigurator/>
 
+    <!--File appender-->
     <appender name="file" class="ch.qos.logback.core.FileAppender">
         <file>${TOPJAVA_ROOT}/log/topjava.log</file>
 
@@ -13,10 +14,13 @@
         </encoder>
     </appender>
 
+    <!--Console appender-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <charset>UTF-8</charset>
             <pattern>%-5level %logger{0} [%file:%line] %msg%n</pattern>
+            <!--DEBUG UserServlet [UserServlet.java:25] redirect to users-->
+            <!--INFO  MealServlet [MealServlet.java:21] getAll-->
         </encoder>
     </appender>
 
